@@ -7,9 +7,7 @@ const app=express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://arun:arun123@cluster0.5bjnd.mongodb.net/covidDb?retryWrites=true&w=majority",
-    { useNewUrlParser: true })
-
+//monodb database
 app.use("/api/patient",patientRoutes)
 
 app.listen(3001,()=>{
